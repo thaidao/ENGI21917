@@ -1,0 +1,28 @@
+-- VHDL code to implement a gate with three inputs and two outputs
+-- Output f is the NOR of inputs a and c
+-- Output g is the XNOR of inputs b and c
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- Entity declaration
+entity gate_design is
+    Port (
+        a : in  STD_LOGIC; -- Input a
+        b : in  STD_LOGIC; -- Input b
+        c : in  STD_LOGIC; -- Input c
+        f : out STD_LOGIC; -- Output f (NOR of a and c)
+        g : out STD_LOGIC  -- Output g (XNOR of b and c)
+    );
+end gate_design;
+
+-- Architecture declaration
+architecture Behavioral of gate_design is
+begin
+    -- Logic for output f: NOR of a and c
+    f <= not (a or c);
+
+    -- Logic for output g: XNOR of b and c
+    g <= not (b xor c);
+    
+end Behavioral;
