@@ -1,0 +1,8 @@
+|lab3_p1
+sw[0] => f.IN0
+sw[1] => f.IN1
+sw[2] => f.IN1
+sw[3] => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+

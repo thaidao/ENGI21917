@@ -1,0 +1,26 @@
+|lab3_p1_s2
+a => lab3_p1_s2_andgate:ANDGATE.andgate_in[0]
+b => lab3_p1_s2_andgate:ANDGATE.andgate_in[1]
+c => lab3_p1_s2_andgate:ANDGATE.andgate_in[2]
+d => lab3_p1_s2_xor:XORGATE.xor_in[1]
+f <= lab3_p1_s2_inverter:INVERTER.inv_out
+
+
+|lab3_p1_s2|lab3_p1_s2_andgate:ANDGATE
+andgate_in[0] => andgate_out.IN0
+andgate_in[1] => andgate_out.IN1
+andgate_in[2] => andgate_out.IN1
+andgate_out <= andgate_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_p1_s2|lab3_p1_s2_xor:XORGATE
+xor_in[0] => xor_out.IN0
+xor_in[1] => xor_out.IN1
+xor_out <= xor_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_p1_s2|lab3_p1_s2_inverter:INVERTER
+inv_in => inv_out.DATAIN
+inv_out <= inv_in.DB_MAX_OUTPUT_PORT_TYPE
+
+
