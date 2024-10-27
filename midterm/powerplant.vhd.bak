@@ -1,0 +1,26 @@
+library IEEE.
+
+
+
+--declare entity
+entity SystemPlant is:
+port(
+	motor: 		in		std_bit_vector(2 downto 0);
+	alarm: 		out		std_bit;
+	shutdown:	out		std_bit;		
+);
+
+--declare behavioural
+
+architecture sysbhv of SystemPlant is:
+begin
+(
+	with motor select
+		alarm <= '0' when "111",
+				'1' when others;
+				
+	with motor select
+		shutdown <= '1' when "000" or "001" or "010" or "100",
+				 '0': case others;
+)
+end sysbhv;

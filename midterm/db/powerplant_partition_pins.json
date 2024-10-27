@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "alarm",
+					"strict" : false
+				},
+				{
+					"name" : "shutdown",
+					"strict" : false
+				},
+				{
+					"name" : "motor[0]",
+					"strict" : false
+				},
+				{
+					"name" : "motor[1]",
+					"strict" : false
+				},
+				{
+					"name" : "motor[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
